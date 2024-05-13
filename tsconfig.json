@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Target ECMAScript version
+    "module": "CommonJS", // Module system (Node.js uses CommonJS)
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src", // Source code directory
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Enable esModuleInterop
+    "resolveJsonModule": true, // Allow importing JSON files
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file casing
+    "sourceMap": true, // Generate source maps for debugging
+    "types": ["node", "express"],
+    "noImplicitAny": false,
+  },
+  "include": ["src/**/*.ts"], // Include TypeScript source files
+  "exclude": ["node_modules"] // Exclude node_modules directory
+}
