@@ -23,6 +23,10 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send("health check");
+});
+
 app.use(ErrorHandler);
 
 const httpServer = http.createServer(app);
