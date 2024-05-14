@@ -1,4 +1,3 @@
-import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
@@ -17,8 +16,6 @@ import {
   startGame,
 } from "./socketControllers";
 
-// dotenv.config(); // Load variables from .env file
-
 const app = express();
 
 const PORT = 8080;
@@ -32,7 +29,7 @@ const httpServer = http.createServer(app);
 
 export const ioServer = new Server(httpServer, {
   cors: {
-    origin: ["http://localhost:5173"]
+    origin: ["https://rocket-type-client.pages.dev/"]
   }
 });
 
