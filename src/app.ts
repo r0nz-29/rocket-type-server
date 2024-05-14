@@ -33,7 +33,7 @@ const httpServer = http.createServer(app);
 
 export const ioServer = new Server(httpServer, {
   cors: {
-    origin: ["https://rocket-type-client.pages.dev/"]
+    origin: ["https://rocket-type-client.pages.dev/", "https://rocket-type-client.pages.dev", "https://rocket-type-client.pages.dev/multiplayer", "rocket-type-client.pages.dev", "rocket-type-client.pages.dev/"]
   }
 });
 
