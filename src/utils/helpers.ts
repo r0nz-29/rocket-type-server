@@ -1,4 +1,4 @@
-import {faker} from "@faker-js/faker";
+import paragraphs from '../paragraphs.json';
 
 function _newRoomId(length: number) {
   let result = "";
@@ -19,5 +19,12 @@ export function generateRoomId() {
 }
 
 export function getParagraph() {
-  return faker.word.words(50);
+  const p1 = paragraphs[random(paragraphs.length)];
+  const p2 = paragraphs[random(paragraphs.length)];
+  return `${p1}. ${p2}`;
+}
+
+export function random(max: number) {
+  const res = Math.floor(Math.random() * max);
+  return Math.min(res, max - 1);
 }
